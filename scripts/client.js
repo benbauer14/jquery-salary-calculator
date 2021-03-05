@@ -38,7 +38,9 @@ function readyNow(){
 
   function deleteRow(){
       for(let i = 0; i < employees.length; i++){
-          //combine all text from object values into a single string with the word delete appended to the end
+          //using a loop combine all text from object values into a single string with the word delete appended to the end
+          let combinedText = employees[i].firstName + employees[i].lastName + employees[i].ID + employees[i].title+ employees[i].salary+"Delete"
+          console.log(combinedText);
           //compare the created string to the parent parent text 
           //if they match remove the index from the table
           //run monthlyCost
