@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vendors/jquery-3.5.1.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,24 +18,30 @@
     <div id="main">
         <div id="employeeIn">
             <h2>Add Employee</h2>
-            <input id="nameIn" placeholder="First Name" type="text">
-            <input id="nameIn" placeholder="Last Name" type="text">
-            <input id="nameIn" placeholder="ID" type="number">
-            <input id="nameIn" placeholder="Title" type="text">
-            <input id="nameIn" placeholder="Annual Salary" type="number">
+            <input id="firstNameIn" placeholder="First Name" type="text">
+            <input id="lastNameIn" placeholder="Last Name" type="text">
+            <input id="IDIn" placeholder="ID" type="number">
+            <input id="titleIn" placeholder="Title" type="text">
+            <input id="salaryIn" placeholder="Annual Salary" type="number">
             <br>
-            <button id="addEmployee">Submit</button>
+            <button id="addEmployeeButton">Submit</button>
         </div>
         <div id="employeeOut">
             <h3>Employees</h3>
             <table id="employeeTable">
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>ID</td>
-                <td>Title</td>
-                <td>Annual Salary</td>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>ID</td>
+                    <td>Title</td>
+                    <td>Annual Salary</td>
+                    <td>Action</td>
+                </tr>
             </table>
         </div>
     </div>
+    <footer>
+        <h2 id="totalMonthly">Total Monthly: $<span id="monthlyCost">0</span></h2>
+    </footer>
 </body>
 </html>
