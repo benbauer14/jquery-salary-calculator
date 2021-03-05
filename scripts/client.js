@@ -9,6 +9,12 @@ function readyNow(){
   } 
 
   function addEmployee (){
+        //###############Remove ability to add duplicates
+        //###############Remove ability to add duplicates
+                //###############Remove ability to add duplicates
+                        //###############Remove ability to add duplicates
+                                //###############Remove ability to add duplicates
+                                        //###############Remove ability to add duplicates
     //add employee to Employees to array with delete button
     employees.push({
         firstName: $('#firstNameIn').val(),
@@ -31,13 +37,21 @@ function readyNow(){
   }
 
   function deleteRow(){
+      for(let i = 0; i < employees.length; i++){
+          //combine all text from object values into a single string with the word delete appended to the end
+          //compare the created string to the parent parent text 
+          //if they match remove the index from the table
+          //run monthlyCost
+      }
+      console.log($(this).parent().parent().text())
+      //remove row from table
       $(this).parent().parent().empty()
   }
 
   function monthlyCost(){
       let total = 0
       for(let i = 0; i < employees.length; i++){
-          total += Number(employees[i].salary)
+          total += Number(employees[i].salary)/12
       }
       $("#monthlyCost").text(total)
       if(total > 20000){
