@@ -46,8 +46,6 @@ function readyNow(){
         for( let i = 0; i < employees.length; i++){
           let combinedIndex = employees[i].firstName + employees[i].lastName + employees[i].ID + employees[i].title+ employees[i].salary
           if(combinedIndex === newEntry){
-            console.log(combinedIndex)
-            console.log(newEntry)
             //provide warning that employee exists
             $('#warning').text("Employee already exists!")
             //if input matches an existing Employee return ""
@@ -78,6 +76,8 @@ function readyNow(){
   }
 
   function deleteRow(){
+      //clear warning
+      $('#warning').text("")
       for(let i = 0; i < employees.length; i++){
           //using a loop combine all text from object values into a single string with the word delete appended to the end
           let combinedText = employees[i].firstName + employees[i].lastName + employees[i].ID + employees[i].title+ employees[i].salary+"Delete"
