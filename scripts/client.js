@@ -67,6 +67,8 @@ function readyNow(){
     for(let i = 0; i < employees.length; i++){
         $('#employeeTable').append(`<tr><td>${employees[i].firstName}</td><td>${employees[i].lastName}</td><td>${employees[i].ID}</td><td>${employees[i].title}</td><td>${employees[i].salary}</td><td><button class="deleteEmployeeButton">Delete</button></td></tr>`)
     }
+    //add blank row
+    $('#employeeTable').append(`<tr><td colspan="16" height="20px"></td></tr>`)
     $('#firstNameIn').val("")
     $('#lastNameIn').val("")
     $('#IDIn').val(""),
