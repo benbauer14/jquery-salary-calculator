@@ -60,12 +60,12 @@ function readyNow(){
         lastName: $('#lastNameIn').val(),
         ID: $('#IDIn').val(),
         title: $('#titleIn').val(),
-        salary: $('#salaryIn').val()
+        salary: Number($('#salaryIn').val()).toFixed(2)
     })
     $('#employeeTable').empty() //empty employee table
     $('#employeeTable').append(`<tr><th>First Name</th><th>Last Name</th><th>ID</th><th>Title</th><th>Annual Salary</th><th>Action</th></tr>`)
     for(let i = 0; i < employees.length; i++){
-        $('#employeeTable').append(`<tr><td>${employees[i].firstName}</td><td>${employees[i].lastName}</td><td>${employees[i].ID}</td><td>${employees[i].title}</td><td>${employees[i].salary}</td><td><button class="deleteEmployeeButton">Delete</button></td></tr>`)
+        $('#employeeTable').append(`<tr><td>${employees[i].firstName}</td><td>${employees[i].lastName}</td><td>${employees[i].ID}</td><td>${employees[i].title}</td><td>$${numberWithCommas(employees[i].salary)}</td><td><button class="deleteEmployeeButton">Delete</button></td></tr>`)
     }
     //add blank row
     $('#employeeTable').append(`<tr><td colspan="16" height="20px"></td></tr>`)
@@ -103,10 +103,14 @@ function readyNow(){
       for(let i = 0; i < employees.length; i++){
           total += Number(employees[i].salary)/12
       }
-      $("#monthlyCost").text(Math.round(total))
+      $("#monthlyCost").text(numberWithCommas(total.toFixed(2)))
       if(total > 20000){
         $("#totalMonthly").css({"background-color" : "red"})
       }else{
         $("#totalMonthly").css({"background-color" : "white"})
       }
   }
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
