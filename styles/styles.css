@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+#header{
+    background-color: darkgrey;
+    color: white;
+    height: 75px;
+}
+#header h2{
+    position:relative;
+    top: 35%;
+    left: 40%;
+
+}
+#employeeIn{
+    margin: 15px;
+}
+#employeeIn input{
+    margin: 0px; 
+}
+#employeeIn button{
+    margin-top: 15px;
+    position:relative;
+    left: 662px;
+    height: 35px;
+    width: 100px;
+}
+#employeeIn h2{
+    padding-bottom: 15px;
+}
+#employeeOut{
+    margin: 15px;
+}
+
+footer h2{
+    margin: 15px;
+
+}
+table, th, td{
+    border: thin black solid;
+    border-collapse: collapse;
+}
+table{
+    width: 760px
+}
+th, td{
+    width: 15%;
+}
+th{
+    background-color: grey;
+    color: white;
+}
+#employeeOut h2{
+    padding-bottom: 15px;
+}
+#warning{
+    color: red;
+}
